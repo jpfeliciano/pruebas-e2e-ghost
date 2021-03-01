@@ -1,0 +1,6 @@
+{
+    "projectId": "Ghost test cases",
+    "email": "juanp.feliciano@gmail.com",
+    "password": "BeerCoffee#10",
+    "testFiles": "create_post.spec.js"    
+}
