@@ -1,0 +1,9 @@
+{
+    "@user1": {
+        "USERNAME": "juanp.feliciano@gmail.com",
+        "PASSWORD": "MyPswd",
+        "POST_TITLE": "My Post",
+        "POST_TEXT": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu ullamcorper ligula, sed varius augue. Aenean et erat et lorem semper elementum id ut enim. Mauris malesuada bibendum urna sit amet faucibus. Donec et purus tincidunt, bibendum sapien at, porta ligula. Quisque sodales ex a tristique rutrum. Duis quis metus sed enim sagittis semper nec porttitor lorem. Etiam sit amet libero eu augue dapibus iaculis. Integer in augue nec purus elementum fringilla in at lorem. Cras sit amet convallis urna, pretium mollis turpis. Pellentesque condimentum convallis turpis, quis pretium magna. Ut pellentesque et turpis nec pellentesque. Suspendisse potenti. Nulla vulputate magna venenatis odio scelerisque ultrices. Praesent ornare, magna accumsan tempor pellentesque, est magna semper tortor, tristique vestibulum augue neque eu arcu. Pellentesque quis laoreet nulla. Fusce at elementum augue, vitae molestie diam.",
+        "POST_EDIT_NEGATIVE_TEXT": "http://www.uniandes.edu.co"        
+    }
+}
