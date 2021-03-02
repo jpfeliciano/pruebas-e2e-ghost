@@ -15,7 +15,7 @@ describe('Edit un tag with only name', () => {
         })
         cy.wait(1000)
         cy.get('.gh-nav-top').contains('Tags').click()
-		cy.get('.tags-list.gh-list').first() 
+		cy.get('.tags-list.gh-list').first().click()
 		//cy.get('.ember-view.gh-list-data.gh-tag-list-title.gh-list-cellwidth-70').contains('PruebaTag').click()
 		cy.get('#tag-name').clear( {force:true})
 		cy.get('#tag-name').type('PruebaTag1',  {force:true})
