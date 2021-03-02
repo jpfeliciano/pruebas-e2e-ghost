@@ -24,7 +24,7 @@ describe("Test creating a post in Ghost", () => {
         ".koenig-editor__editor.__mobiledoc-editor.__has-no-content"
       ).click();
     });
-    it("Verify successfully creation of Post", () => {
+    it("Verify successfully Post creation", () => {
       cy.get(".gh-nav-top").contains("Posts").click();
       cy.wait(2000);
       cy.contains(title);
