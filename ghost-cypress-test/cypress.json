@@ -2,5 +2,10 @@
     "projectId": "Ghost test cases",
     "email": "juanp.feliciano@gmail.com",
     "password": "MyPsswd",
-    "testFiles": "create_post.spec.js"    
+    "testFiles": ["1_login_success.spec.js", 
+	              "2_create_tag_success.spec.js", 
+				  "3_edit_tag_success.spec.js", 
+				  "4_edit_post_success.spec.js", 
+				  "5_edit_design_site.spec.js",
+				  "create_post.spec.js" ]
 }
