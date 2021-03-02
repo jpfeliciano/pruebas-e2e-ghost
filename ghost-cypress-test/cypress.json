@@ -1,11 +1,19 @@
 {
-    "projectId": "Ghost test cases",
-    "email": "juanp.feliciano@gmail.com",
-    "password": "MyPsswd",
-    "testFiles": ["1_login_success.spec.js", 
-	              "2_create_tag_success.spec.js", 
-				  "3_edit_tag_success.spec.js", 
-				  "4_edit_post_success.spec.js", 
-				  "5_edit_design_site.spec.js",
-				  "create_post.spec.js" ]
+	"projectId": "Ghost test cases",
+	"email": "juanp.feliciano@gmail.com",
+	"password": "MyPsswd",
+	"testFiles": [
+		"1_login_success.spec.js",
+		"2_create_tag_success.spec.js",
+		"3_edit_tag_success.spec.js",
+		"4_edit_post_success.spec.js",
+		"5_edit_design_site.spec.js",
+		"6_signin_negative.spec.js",
+		"7_signin_signout.spec.js",
+		"8_create_post.spec.js",
+		"9_edit_post_negative.spec.js",
+		"10_edit_profile.spec.js"
+	],
+	"postEditNegativeText": "http://www.uniandes.edu.co",
+	"chromeWebSecurity": false
 }
