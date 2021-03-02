@@ -9,26 +9,26 @@ describe("Test creating a post in Ghost", () => {
       cy.wait(2000);
     });
   });
-  it("Create a Post", () => {
-    let title = faker.lorem.sentence();
-    let content = faker.lorem.paragraph();
-    cy.get(".gh-nav-top").contains("Posts").click();
-    cy.wait(2000);
-    cy.get(".ember-view.gh-btn.gh-btn-green").click();
-    cy.wait(2000);
-    cy.get(".gh-editor-title.ember-text-area.gh-input.ember-view").type(title, {
-      force: true,
+  context("Create and verifiy a Post", function () {
+    const title = faker.lorem.sentence();
+    it("Create a Post", () => {
+      cy.get(".gh-nav-top").contains("Posts").click();
+      cy.wait(2000);
+      cy.get(".ember-view.gh-btn.gh-btn-green").click();
+      cy.wait(2000);
+      cy.get(".gh-editor-title.ember-text-area.gh-input.ember-view").click();
+      cy.get(".gh-editor-title.ember-text-area.gh-input.ember-view").type(
+        title
+      );
+      cy.get(
+        ".koenig-editor__editor.__mobiledoc-editor.__has-no-content"
+      ).click();
     });
-    cy.get(".gh-editor-title.ember-text-area.gh-input.ember-view").click();
-    cy.wait(2000);
-    //TODO: Genera la siguiente excepción: Cannot read property 'KeyboardEvent' of undefined
-    // cy.get(
-    //   "div.koenig-editor__editor.__mobiledoc-editor.__has-no-content"
-    // ).type(content, { force: true });
-    cy.wait(3000);
-    cy.get("a.blue.link.fw4.flex.items-center.ember-view").click();
-    cy.wait(2000);
-    cy.contains("title");
+    it("Verify successfully creation of Post", () => {
+      cy.get(".gh-nav-top").contains("Posts").click();
+      cy.wait(2000);
+      cy.contains(title);
+    });
   });
 });
 
