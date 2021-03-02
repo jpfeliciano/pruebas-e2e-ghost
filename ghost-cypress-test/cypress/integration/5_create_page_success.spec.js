@@ -1,7 +1,7 @@
 const email = Cypress.config("email");
 const password = Cypress.config("password");
 
-describe('Edit un tag with only name', () => {
+describe('Create page success', () => {
     beforeEach(()=>{
 		 cy.login().then((user) => {
 		  console.log(user);
