@@ -9,6 +9,11 @@ Este repositorio ha sido construído por:
 | Héctor Arias | h.arias@uniandes.edu.co |
 | Juan Pablo Feliciano | jp.feliciano10@uniandes.edu.co |
 
+## Contenido
+
+- [Pruebas E2E con Kraken](#pruebas-e2e-con-kraken)
+- [Pruebas E2E con Cypress](#pruebas-e2e-con-cypress)
+
 ## Pruebas E2E con Kraken
 
 Los escenarios seleccionados para las pruebas con Kraken pertenecen a 8 funcionalidades de Ghost descritas a continuación:
