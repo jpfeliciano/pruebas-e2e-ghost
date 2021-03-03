@@ -142,9 +142,7 @@ En una terminal ubíquese en el directorio `pruebas-e2e-ghost/ghost-cypress-test
 
 ## Ventajas y desventajas de las herramientas utilizadas para las pruebas E2E
 
-En la siguiente página del proyecto se detallan los pros y contras que el equipo de pruebas encontró durante la implementación de los escenarios de prueba:
+En la siguiente página del proyecto se detallan los pros y contras que el equipo de pruebas encontró con cada una de las herramientas durante la implementación de los escenarios de prueba:
 
-[Pros y Contras]()
-
-En el readme del repositorio detallen las funcionalidades y escenarios probados. No olviden hacer un resumen de los pros y los contras de cada herramienta. Este resumen lo deben dejar visible como una página en la wiki del repositorio.
+[Pros y Contras](wiki/pros_contras-e2e)
 
