@@ -144,5 +144,5 @@ En una terminal ubíquese en el directorio `pruebas-e2e-ghost/ghost-cypress-test
 
 En la siguiente página del proyecto se detallan los pros y contras que el equipo de pruebas encontró con cada una de las herramientas durante la implementación de los escenarios de prueba:
 
-[Pros y Contras](wiki/pros_contras-e2e)
+[Pros y Contras](https://github.com/jpfeliciano/pruebas-e2e-ghost/wiki/pros_contras-e2e)
 
