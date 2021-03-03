@@ -27,7 +27,7 @@ Los escenarios seleccionados para las pruebas con Kraken pertenecen a 8 funciona
 - JDK instalado en una versión de Java igual o superior a la 8.
 - SDK de Android instalado. (Puede aprender más sobre la instalación en este enlace: https://developer.android.com/studio).
 - El driver Chromedriver instalado en su máquina. (Puede obtener el driver desde este enlace: https://chromedriver.chromium.org/downloads).
-- Instalar la versión 3.41.1 de Ghost en su máquina local siguiendo el tutorial del siguiente enlace [Ghost](https://misovirtual.virtual.uniandes.edu.co/codelabs/ghost-local-deployment/index.html#0).
+- Instalar la versión 3.41.1 de Ghost en su máquina local siguiendo el tutorial del siguiente enlace [Tutorial - Ghost](https://misovirtual.virtual.uniandes.edu.co/codelabs/ghost-local-deployment/index.html#0).
 - Crear una cuenta de usuario en Ghost (Incluído en el tuttorial del anterior punto).
 
 #### Configuración de variables de entorno
@@ -37,13 +37,13 @@ Los escenarios seleccionados para las pruebas con Kraken pertenecen a 8 funciona
 
 #### Instalar Kraken-Mobile desde el código fuente
 
-Para instalar Kraken-Mobile, también puede optar por tener su propia instancia del proyecto de forma local y hacer uso de las funcionalidades de la gema compilando desde el código fuente. Para lograr esto, puede manejar Kraken-Mobile haciendo uso de otra gema denominada Bundler. En su terminal, ejecute el siguiente comando:
+- En su terminal, ejecute el siguiente comando:
 
 `gem install bundler`
 
-Esto instalará la gema en su máquina y le permitirá administrar como gemas otros proyectos que disponga en su máquina. Es necesario, entonces, que descargue el código fuente de Kraken-Mobile a su máquina local. Para esto, ubíquese en un directorio donde alojará tanto el subdirectorio para ejecutar las pruebas, como el subdirectorio para Kraken-Mobile, y clone los contenidos del repositorio desde la siguiente ubicación: [KrakenMobile](https://github.com/TheSoftwareDesignLab/KrakenMobile)
+- Ahora descargue el código fuente de Kraken-Mobile a su máquina local. Para esto, ubíquese en el directorio donde se alojará el subdirectorio con las pruebas (paso siguiente), como el subdirectorio para Kraken-Mobile. Clone los fuentes de Kraken desde el siguiente repositorio: [KrakenMobile](https://github.com/TheSoftwareDesignLab/KrakenMobile).
 
-En este mismo directorio desde una terminal clone este repositorio utilizando uno de los siguientes comandos:
+- En el mismo directorio (padre) que contiene el código fuente de Kraken, clone el repositorio de pruebas utilizando uno de los siguientes comandos:
 
 `git clone git@github.com:jpfeliciano/pruebas-e2e-ghost.git`
 
@@ -52,11 +52,11 @@ En este mismo directorio desde una terminal clone este repositorio utilizando un
 `git clone https://github.com/jpfeliciano/pruebas-e2e-ghost.git`
 
 
-Ahora navegue hasta el subdirectorio `pruebas-e2e-ghost/ghost-kraken-test` con el siguiente comando:
+- Ahora navegue hasta el subdirectorio `pruebas-e2e-ghost/ghost-kraken-test` con el siguiente comando:
 
 `cd pruebas-e2e-ghost/ghost-kraken-test/`
 
-Finalmente instale ruby y kraken:
+- Finalmente instale ruby y kraken:
 
 `bundle install`
 
