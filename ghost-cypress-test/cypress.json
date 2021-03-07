@@ -1,5 +1,7 @@
 {
 	"projectId": "Ghost test cases",
+	"ghostUrl": "http://localhost:2368/ghost/",
+	"ghostAuthUrl": "http://localhost:2368/ghost/api/v3/admin/session",
 	"email": "juanp.feliciano@gmail.com",
 	"password": "MyPsswd",
 	"testFiles": [
