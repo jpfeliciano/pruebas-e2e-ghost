@@ -5,13 +5,13 @@
     "ghostUrl": "http://localhost:2368/ghost/",
     "ghostAuthUrl": "http://localhost:2368/ghost/api/v3/admin/session",
     "email": "juanp.feliciano@gmail.com",
-    "password": "BeerCoffee#10",
+    "password": "psswd",
     "testFiles": [
-        "create_page.spec.js",
-        "create_post.spec.js",
-        "edit_profile.spec.js",
-        "list_pages.spec.js",
-        "signin_signout.spec.js"
+        "6_create_page.spec.js",
+        "7_create_post.spec.js",
+        "8_edit_profile.spec.js",
+        "9_list_pages.spec.js",
+        "10_signin_signout.spec.js"
     ],
     "chromeWebSecurity": false,
     "postEditNegativeText": "http://www.uniandes.edu.co",
