@@ -1,0 +1,23 @@
+{
+    "projectId": "Ghost test cases",
+    "trashAssetsBeforeRuns": false,
+    "baseUrl": "http://localhost:2368",
+    "ghostUrl": "http://localhost:2368/ghost/",
+    "ghostAuthUrl": "http://localhost:2368/ghost/api/v3/admin/session",
+    "email": "juanp.feliciano@gmail.com",
+    "password": "BeerCoffee#10",
+    "testFiles": [
+        "create_page.spec.js",
+        "create_post.spec.js",
+        "edit_profile.spec.js",
+        "list_pages.spec.js",
+        "signin_signout.spec.js"
+    ],
+    "chromeWebSecurity": false,
+    "postEditNegativeText": "http://www.uniandes.edu.co",
+    "modifyObstructiveCode": true,
+    "experimentalSourceRewriting": false,
+    "appReference": "-after",
+    "screenSubFolder": "after/",
+    "appVersion": "3.41.1"
+}
