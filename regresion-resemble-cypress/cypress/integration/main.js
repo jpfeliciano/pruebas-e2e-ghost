@@ -12,6 +12,9 @@ async function executeTest() {
   let resultInfo = {};
 
   fs.readdir(directory, (err, files) => {
+    let field='lname';
+    files.sort( compare );
+    console.log( files.sort( compare ))
     files.forEach((file) => {
       if (file != undefined) {
         fs.readdir(directory + "/" + file, (err, files) => {
@@ -28,6 +31,17 @@ async function executeTest() {
     });
   });
 
+  async function compare( a, b ) {
+    if ( a.nameFile < b.nameFile ){
+      return -1;
+    }
+    if ( a.nameFile > b.nameFile ){
+      return 1;
+    }
+    return 0;
+  }
+
+  
   async function prueba(nameFile, folder, folderScenario) {
     const data = await compareImages(
       fs.readFileSync(
