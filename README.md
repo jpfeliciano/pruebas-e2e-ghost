@@ -13,6 +13,8 @@ Este repositorio ha sido construído por:
 
 - [Pruebas E2E con Kraken](#pruebas-e2e-con-kraken)
 - [Pruebas E2E con Cypress](#pruebas-e2e-con-cypress)
+- [Pruebas de regresión visual](#pruebas-de-regresion-visual)
+- [ Ventajas y desventajas de las herramientas utilizadas para las pruebas E2E](#ventajas-y-desventajas-de-las-herramientas-utilizadas-para-las-pruebas-e2e)
 
 ## Pruebas E2E con Kraken
 
@@ -163,6 +165,74 @@ En una terminal ubíquese en el directorio `pruebas-e2e-ghost/ghost-cypress-test
 En una terminal ubíquese en el directorio `pruebas-e2e-ghost/ghost-cypress-test` y ejecute el siguiente comando para probar todos los escenarios:
 
 `./node_modules/.bin/cypress run -C cypress.json`
+
+## Pruebas de regresión visual
+
+Los 13 escenarios seleccionados para las pruebas de regresión visual pertenecen a 10 funcionalidades de Ghost descritas a continuación:
+
+|Nº| Funcionalidad | Escenario | Tipo de Escenario |
+|-| ------------- | ------------- | ------------- |
+|1| Listar Posts/Publicaciones | Mostrar el listado de publicaciones creada en el sitio. | Positivo |
+|2| Listar Páginas | Mostrar el listado de páginas creadas en el sitio. | Positivo |
+|3| Listar Tags | Mostrar el listado de tags creados en el sitio. | Positivo |
+|4| Ver Staff | Mostrar usuarios creados en el sitio. | Positivo |
+|5| Crear Post/Publicación | Crear un Post/Publicación en Ghost. | Positivo |
+|6| Crear Página | Creación de una página en Ghost | Positivo |
+|7| Crear Tag | Creación de un Tag en Ghost | Positivo |
+|8| Editar Perfil de Usuario | Edición de los datos del perfil de un usuario en Ghost | Positivo |
+|9| Iniciar sesión en la consola de administración | Incio de sesión con usuario y password correctos. | Positivo |
+|10| Cerrar Sesión | Cerrar una sesión activa en Ghost. | Positivo |
+
+El código de los escenarios de pruebas de extremo a extremo implementados con Cypress y la regresión visual implementada con ResembleJS se encuentran en el directorio [regresion-resemble-cypress](regresion-resemble-cypress).
+
+#### Prerequisitos
+
+- Una versión actualizada de Node.js instalada en su computadora.
+- Una versión actualizada del manejador de paquetes npm instalada en su computadora. 
+- Instalar las versiones 3.3.0 y 3.41.1 de Ghost en su máquina local siguiendo el tutorial del siguiente enlace [Tutorial - Ghost](https://misovirtual.virtual.uniandes.edu.co/codelabs/ghost-local-deployment/index.html#0). Tenga en cuenta la asignación de un puerto diferente a cada instancia de Ghost. Para lograr este propósito, en la raíz del directorio de instalación de cada una de las instancias de Ghost abra el archivo `config.development.json` y establezca los valores de los atributos `url` y `port` tomando cómo referencia el siguiente ejemplo:
+
+`"url": "http://localhost:2368/",`
+  `"server": {`
+    `"port": 2368,`
+    `"host": "127.0.0.1"`
+  `},`
+- Una vez realizados estos ajustes, debe detener y reiniciar Ghost para que los cambios se apliquen.
+- Crear una cuenta de usuario en cada una de las instancias de Ghost (Incluído en el tutorial del anterior punto).
+
+#### Instalar librerías
+
+Clone el repositorio de pruebas en su máquina utilizando uno de los siguientes comandos:
+
+`git clone git@github.com:jpfeliciano/pruebas-e2e-ghost.git`
+
+ó
+
+`git clone https://github.com/jpfeliciano/pruebas-e2e-ghost.git`
+
+
+- Ahora navegue hasta el subdirectorio `pruebas-e2e-ghost/regresion-resemble-cypress` con el siguiente comando:
+
+`cd pruebas-e2e-ghost/regresion-resemble-cypress/`
+
+- Finalmente instale las librerías requeridas:
+
+`npm install`
+
+#### Configuración de parámetros de ejecución
+
+En una terminal ubíquese en el directorio `pruebas-e2e-ghost/regresion-resemble-cypress` y abra los archivos `cypress.json` y `cypress-3.3.0.json` en el editor de texto de su preferencia. Estos archivos tienen varios parámetros de configuración que se utilizarán para ejecutar las pruebas sobre cada una de las versiones instaladas de Ghost. El archivo `cypress.json` contiene los parámetros de configuración de la instancia con la versión `3.41.1` de Ghost y el archivo `cypress-3.3.0.json` contiene los parámetros de configuración de la instancia con la versión `3.3.0` de Ghost. Establezca el valor de los siguientes parámetros en cada uno de los archivos de acuerdo con el valor que corresponda:
+
+- `baseUrl`
+- `ghostUrl`
+- `ghostAuthUrl`
+- `email`
+- `password`
+
+#### Ejecución de las pruebas E2E
+
+En una terminal ubíquese en el directorio `pruebas-e2e-ghost/regresion-resemble-cypress` y ejecute el siguiente comando para correr las pruebas de extremo a extremo, recopilar las evidencias durante la ejecución de cada paso, comparar las diferencias entre las imágenes recopiladas de cada versión y obtener un reporte consolidado con el resultado:
+
+`./execute-regresion.sh`
 
 ## Ventajas y desventajas de las herramientas utilizadas para las pruebas E2E
 
