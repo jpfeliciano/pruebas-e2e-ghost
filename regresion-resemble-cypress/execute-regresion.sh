@@ -9,5 +9,7 @@ echo -e "./node_modules/.bin/cypress run -C cypress.json -b chrome \n"
 ./node_modules/.bin/cypress run -C cypress.json -b chrome
 
 echo -e "\n**** Análisis de resultados con ResembleJS **** \n"
-echo -e "node main.js\n"
-##node main.js
+echo -e "node ../cypress/integration/main.js\n"
+cd cypress
+cd integration
+node main.js
