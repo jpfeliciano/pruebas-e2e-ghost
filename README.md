@@ -139,7 +139,7 @@ El código de los escenarios de prueba implementados con Cypress se encuentra en
 
 #### Instalar librerías
 
-Clone el repositorio de pruebas utilizando uno de los siguientes comandos:
+- Clone el repositorio de pruebas utilizando uno de los siguientes comandos:
 
 `git clone git@github.com:jpfeliciano/pruebas-e2e-ghost.git`
 
@@ -201,7 +201,7 @@ El código de los escenarios de pruebas de extremo a extremo implementados con C
 
 #### Instalar librerías
 
-Clone el repositorio de pruebas en su máquina utilizando uno de los siguientes comandos:
+- Clone el repositorio de pruebas en su máquina utilizando uno de los siguientes comandos:
 
 `git clone git@github.com:jpfeliciano/pruebas-e2e-ghost.git`
 
