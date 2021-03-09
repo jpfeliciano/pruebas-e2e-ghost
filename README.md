@@ -168,7 +168,7 @@ En una terminal ubíquese en el directorio `pruebas-e2e-ghost/ghost-cypress-test
 
 ## Pruebas de regresión visual
 
-Los 13 escenarios seleccionados para las pruebas de regresión visual pertenecen a 10 funcionalidades de Ghost descritas a continuación:
+Los 10 escenarios seleccionados para las pruebas de regresión visual pertenecen a 10 funcionalidades de Ghost descritas a continuación:
 
 |Nº| Funcionalidad | Escenario | Tipo de Escenario |
 |-| ------------- | ------------- | ------------- |
