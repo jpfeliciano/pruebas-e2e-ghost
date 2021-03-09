@@ -234,6 +234,8 @@ En una terminal ubíquese en el directorio `pruebas-e2e-ghost/regresion-resemble
 
 `./execute-regresion.sh`
 
+Cuando finalice la ejecución del script vaya al directorio `cypress/results` y abra el archivo `report.html` para ver el resultado de la regresión visual.
+
 ## Ventajas y desventajas de las herramientas utilizadas para las pruebas E2E
 
 En la siguiente página del proyecto se detallan los pros y contras que el equipo de pruebas encontró con cada una de las herramientas durante la implementación de los escenarios de prueba:
