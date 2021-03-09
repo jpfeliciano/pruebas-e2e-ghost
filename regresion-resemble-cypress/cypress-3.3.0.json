@@ -5,7 +5,7 @@
     "ghostUrl": "http://localhost:2369/ghost/",
     "ghostAuthUrl": "http://localhost:2369/ghost/api/v3/admin/session",
     "email": "juanp.feliciano@gmail.com",
-    "password": "psswd",
+    "password": "P455w0rd#1",
     "testFiles": [
         "6_create_page.spec.js",
         "7_create_post.spec.js",
@@ -17,7 +17,6 @@
     "postEditNegativeText": "http://www.uniandes.edu.co",
     "modifyObstructiveCode": true,
     "experimentalSourceRewriting": false,
-    "appReference": "-before",
-    "screenSubFolder": "before/",
+    "appReference": "before",
     "appVersion": "3.3.0"
 }

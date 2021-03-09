@@ -4,7 +4,6 @@ const ghostAuthUrl = Cypress.config("ghostAuthUrl");
 const email = Cypress.config("email");
 const password = Cypress.config("password");
 const appReference = Cypress.config("appReference");
-const screenSubFolder = Cypress.config("screenSubFolder");
 const appVersion = Cypress.config("appVersion");
 
 describe("Test Sign in and Sign out with Ghost", () => {
@@ -22,7 +21,7 @@ describe("Test Sign in and Sign out with Ghost", () => {
     });
     cy.get("div.gh-nav-bottom").click();
     cy.wait(1000);
-    cy.screenshot(screenSubFolder + "menu-nav-bottom" + appReference, {
+    cy.screenshot(`step_1/${appReference}-signin-signout`, {
       capture: "fullPage",
     });
     cy.get("a.dropdown-item.user-menu-signout.ember-view").click();

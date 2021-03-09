@@ -5,7 +5,6 @@ const ghostAuthUrl = Cypress.config("ghostAuthUrl");
 const email = Cypress.config("email");
 const password = Cypress.config("password");
 const appReference = Cypress.config("appReference");
-const screenSubFolder = Cypress.config("screenSubFolder");
 const appVersion = Cypress.config("appVersion");
 
 describe("Test edit user profile in Ghost", () => {
@@ -18,7 +17,7 @@ describe("Test edit user profile in Ghost", () => {
   it("Edit user profile", () => {
     cy.get(".gh-nav-top").contains("Staff").click();
     cy.wait(2000);
-    cy.screenshot(screenSubFolder + "listar-staff" + appReference);
+    cy.screenshot(`step_1/${appReference}-edit-profile`);
     // Then I click on my user record contained in css selector ".apps-grid-cell.tooltip-centered" by using the selector value ".gh-user-name.mb1"
     cy.get("span.gh-user-name.mb1")
       .invoke("text")
@@ -33,17 +32,11 @@ describe("Test edit user profile in Ghost", () => {
                   cy.visit(ghostUrl + href);
                   // Then I wait for 1 seconds
                   cy.wait(1000);
-                  cy.screenshot(
-                    screenSubFolder + "perfil-usuario-top" + appReference
-                  );
+                  cy.screenshot(`step_2/${appReference}-edit-profile`);
                   cy.get(".gh-main").scrollTo("center");
-                  cy.screenshot(
-                    screenSubFolder + "perfil-usuario-center" + appReference
-                  );
+                  cy.screenshot(`step_3/${appReference}-edit-profile`);
                   cy.get(".gh-main").scrollTo("bottom");
-                  cy.screenshot(
-                    screenSubFolder + "perfil-usuario-bottom" + appReference
-                  );
+                  cy.screenshot(`step_4/${appReference}-edit-profile`);
                   cy.get(".gh-main").scrollTo("top");
                   // Then I clear input field having id "user-name"
                   cy.get("#user-name").clear({ force: true });
@@ -72,17 +65,11 @@ describe("Test edit user profile in Ghost", () => {
                     cy.visit(ghostUrl + href);
                     // Then I wait for 1 seconds
                     cy.wait(1000);
-                    cy.screenshot(
-                      screenSubFolder + "perfil-usuario-top" + appReference
-                    );
+                    cy.screenshot(`step_2/${appReference}-edit-profile`);
                     cy.get(".gh-main").scrollTo("center");
-                    cy.screenshot(
-                      screenSubFolder + "perfil-usuario-center" + appReference
-                    );
+                    cy.screenshot(`step_3/${appReference}-edit-profile`);
                     cy.get(".gh-main").scrollTo("bottom");
-                    cy.screenshot(
-                      screenSubFolder + "perfil-usuario-bottom" + appReference
-                    );
+                    cy.screenshot(`step_4/${appReference}-edit-profile`);
                     cy.get(".gh-main").scrollTo("top");
                     // Then I clear input field having id "user-name"
                     cy.get("#user-name").clear({ force: true });

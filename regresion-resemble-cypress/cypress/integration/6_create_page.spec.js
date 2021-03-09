@@ -5,7 +5,6 @@ const ghostAuthUrl = Cypress.config("ghostAuthUrl");
 const email = Cypress.config("email");
 const password = Cypress.config("password");
 const appReference = Cypress.config("appReference");
-const screenSubFolder = Cypress.config("screenSubFolder");
 const appVersion = Cypress.config("appVersion");
 
 describe("Test - creating a page in Ghost", () => {
@@ -20,14 +19,14 @@ describe("Test - creating a page in Ghost", () => {
     it("Create a Page", () => {
       cy.get(".gh-nav-top").contains("Pages").click();
       cy.wait(2000);
-      cy.screenshot(screenSubFolder + "listar-paginas" + appReference);
+      cy.screenshot(`step_1/${appReference}-create-page`);
       if (appVersion == "3.3.0") {
         cy.get(".gh-btn.gh-btn-green.ember-view").click();
       } else {
         cy.get(".ember-view.gh-btn.gh-btn-green").click();
       }
       cy.wait(2000);
-      cy.screenshot(screenSubFolder + "crear-pagina" + appReference);
+      cy.screenshot(`step_2/${appReference}-create-page`);
       cy.get(".gh-editor-title.ember-text-area.gh-input.ember-view").click();
       cy.get(".gh-editor-title.ember-text-area.gh-input.ember-view").type(
         title
