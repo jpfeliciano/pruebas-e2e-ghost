@@ -1,6 +1,6 @@
 # Repositorio pruebas E2E de Ghost con Kraken y Cypress
 
-Este repositorio contiene 10 escenarios de pruebas de extremo-a-extremo (E2E) sobre la plataforma de gestión de contenido [Ghost](https://github.com/TryGhost/Ghost), cada escenario de prueba fue implementado con [Kraken](https://thesoftwaredesignlab.github.io/KrakenMobile/) y con [Cypress](https://www.cypress.io/).
+Este repositorio contiene 30 escenarios de pruebas de extremo-a-extremo (E2E) sobre la plataforma de gestión de contenido [Ghost](https://github.com/TryGhost/Ghost) implementados con [Kraken](https://thesoftwaredesignlab.github.io/KrakenMobile/) y con [Cypress](https://www.cypress.io/).
 
 Este repositorio ha sido construído por:
 
@@ -16,20 +16,36 @@ Este repositorio ha sido construído por:
 
 ## Pruebas E2E con Kraken
 
-Los escenarios seleccionados para las pruebas con Kraken pertenecen a 8 funcionalidades de Ghost descritas a continuación:
+Los 26 escenarios seleccionados para las pruebas con Kraken pertenecen a 16 funcionalidades de Ghost descritas a continuación:
 
-| Funcionalidad | Escenario | Tipo de Escenario |
-| ------------- | ------------- | ------------- |
-| Iniciar sesión en la consola de administración | Incio de sesión con usuario y password correctos. | Positivo |
-| Iniciar sesión en la consola de administración | Incio de sesión con usuario y password incorrectos. | Negativo |
-| Crear Post | Creación de un Post en Ghost. | Positivo |
-| Editar Post | Edición de un Post en Ghost. | Positivo |
-| Editar Post | Edición de un Post en Ghost. | Negativo |
-| Crear Página | Creación de una página en Ghost | Positivo |
-| Editar Perfil de Usuario | Edición de los datos del perfil de un usuario en Ghost | Positivo |
-| Crear Tag | Creación de un Tag en Ghost | Positivo |
-| Editar Tag | Edición de los datos de un Tag en Ghost | Positivo |
-| Cerrar Sesión | Cerrar una sesión activa en Ghost | Positivo |
+|Nº| Funcionalidad | Escenario | Tipo de Escenario |
+|-| ------------- | ------------- | ------------- |
+|1| Iniciar sesión en la consola de administración | Incio de sesión con usuario y password correctos. | Positivo |
+|2| Iniciar sesión en la consola de administración | Incio de sesión con usuario y password incorrectos. | Negativo |
+|3| Crear Post | Creación de un Post en Ghost. | Positivo |
+|4| Editar Post | Edición de un Post en Ghost. | Positivo |
+|5| Editar Post | Edición de un Post en Ghost. | Negativo |
+|6| Crear Página | Creación de una página en Ghost | Positivo |
+|7| Editar Perfil de Usuario | Edición de los datos del perfil de un usuario en Ghost | Positivo |
+|8| Crear Tag | Creación de un Tag en Ghost | Positivo |
+|9| Editar Tag | Edición de los datos de un Tag en Ghost | Positivo |
+|10| Cerrar Sesión | Cerrar una sesión activa en Ghost | Positivo |
+|11| Crear Página | Crear una pagina en el sitio, con una fecha de publicación anterior a la actual. | Positivo |
+|12| Crear Página | Crear una pagina en el sitio, con una fecha de publicación posterior a la actual. | Positivo |
+|13| Crear Página | Crear una pagina en el sitio, con titulo que tenga más de 255 caracteres. | Negativo |
+|14| Ordenar publicaciones | Ordenar el listado de las publicaciones/posts de acuerdo con las opciones disponibles. | Positivo |
+|15| Filtrar publicaciones | Ver únicamente las publicaciones con estado publicado/público. | Positivo |
+|16| Gestionar Staff | Realizar una invitación a las personas a contribuir en el sitio. | Positivo |
+|17| Gestionar Staff | Realizar una invitación a las personas a contribuir en el sitio (Sin Ingresar Campos Obligatorios). | Negativo |
+|18| Configuraciones Generales | Editar información del titulo y descripción del sitio. | Positivo |
+|19| Eliminar Post | Eliminación de un Post/Publicación | Positivo |
+|20| Ordenar publicaciones | Validar que al momento de ingresar a la vista, el proceso de ordenamiento se cargue por defecto: el más nuevo. | Positivo |
+|21| Crear Vista | Crear vista personalizada de acuerdo a la visualización que se tenga en le momento de su creación. | Positivo |
+|22| Crear Vista | Crear vista con un nombre largo, el sistema debe informar la cantidad de caracteres permitidos. | Positivo |
+|23| Editar Vista | Permitir editar la vista, con una nueva visualización de la informaión. | Negativo |
+|24| Editar Vista | Editar campo nombre con un valor largo, el sistema debe informar la cantidad de caracteres. | Negativo |
+|25| Editar Vista | Editar el nombre de la vista, con 1 caracter valido. | Positivo |
+|26| Eliminar Vista | Ingresar a una vista personalizada y eliminarla. | Positivo |
 
 El código de los escenarios de prueba implementados con kraken se encuentra en el directorio [ghost-kraken-test](ghost-kraken-test).
 
@@ -90,20 +106,23 @@ El comando anterior ejecuta todos los escenarios de prueba que se encuentran ubi
 
 ## Pruebas E2E con Cypress
 
-Los escenarios seleccionados para las pruebas con Cypress pertenecen a las mismas funcionalidades de Ghost implementadas con Kraken. Estos escenarios se describen a continuación:
+Los 13 escenarios seleccionados para las pruebas con Cypress pertenecen a 10 funcionalidades de Ghost descritas a continuación:
 
-| Funcionalidad | Escenario | Tipo de Escenario |
-| ------------- | ------------- | ------------- |
-| Iniciar sesión en la consola de administración | Incio de sesión con usuario y password correctos. | Positivo |
-| Iniciar sesión en la consola de administración | Incio de sesión con usuario y password incorrectos. | Negativo |
-| Crear Post | Creación de un Post en Ghost. | Positivo |
-| Editar Post | Edición de un Post en Ghost. | Positivo |
-| Editar Post | Edición de un Post en Ghost. | Negativo |
-| Crear Página | Creación de una página en Ghost | Positivo |
-| Editar Perfil de Usuario | Edición de los datos del perfil de un usuario en Ghost | Positivo |
-| Crear Tag | Creación de un Tag en Ghost | Positivo |
-| Editar Tag | Edición de los datos de un Tag en Ghost | Positivo |
-| Cerrar Sesión | Cerrar una sesión activa en Ghost | Positivo |
+|Nº|| Funcionalidad | Escenario | Tipo de Escenario |
+|-| ------------- | ------------- | ------------- |
+|1| Iniciar sesión en la consola de administración | Incio de sesión con usuario y password correctos. | Positivo |
+|2| Iniciar sesión en la consola de administración | Incio de sesión con usuario y password incorrectos. | Negativo |
+|3| Crear Post | Creación de un Post en Ghost. | Positivo |
+|4| Editar Post | Edición de un Post en Ghost. | Positivo |
+|5| Editar Post | Edición de un Post en Ghost. | Negativo |
+|6| Crear Página | Creación de una página en Ghost | Positivo |
+|7| Editar Perfil de Usuario | Edición de los datos del perfil de un usuario en Ghost | Positivo |
+|8| Crear Tag | Creación de un Tag en Ghost | Positivo |
+|9| Editar Tag | Edición de los datos de un Tag en Ghost | Positivo |
+|10| Cerrar Sesión | Cerrar una sesión activa en Ghost | Positivo |
+|11| Listar Post | Consultar el listado de Posts/Publicaciones creado(a)s. | Positivo |
+|12| Crear Página | Crear una pagina en el sitio, con configuraciones adicionales, tags, autores, titulo y descripción. | Positivo |
+|13| Listar Páginas | Consultar el listado de Páginas creado(a)s. | Positivo |
 
 El código de los escenarios de prueba implementados con Cypress se encuentra en el directorio [ghost-cypress-test](ghost-cypress-test).
 
