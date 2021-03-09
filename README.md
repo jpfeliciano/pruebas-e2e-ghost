@@ -108,7 +108,7 @@ El comando anterior ejecuta todos los escenarios de prueba que se encuentran ubi
 
 Los 13 escenarios seleccionados para las pruebas con Cypress pertenecen a 10 funcionalidades de Ghost descritas a continuación:
 
-|Nº|| Funcionalidad | Escenario | Tipo de Escenario |
+|Nº| Funcionalidad | Escenario | Tipo de Escenario |
 |-| ------------- | ------------- | ------------- |
 |1| Iniciar sesión en la consola de administración | Incio de sesión con usuario y password correctos. | Positivo |
 |2| Iniciar sesión en la consola de administración | Incio de sesión con usuario y password incorrectos. | Negativo |
