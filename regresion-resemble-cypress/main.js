@@ -11,6 +11,7 @@ async function executeTest() {
   let resultInfo = {};
 
   fs.readdir(directory, (err, files) => {
+    console.log(files)
     files.forEach((file) => {
       if (file != undefined) {
         fs.readdir(directory + "/" + file, (err, files) => {
