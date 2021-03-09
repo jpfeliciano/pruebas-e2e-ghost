@@ -13,7 +13,7 @@ Este repositorio ha sido construído por:
 
 - [Pruebas E2E con Kraken](#pruebas-e2e-con-kraken)
 - [Pruebas E2E con Cypress](#pruebas-e2e-con-cypress)
-- [Pruebas de regresión visual](#pruebas-de-regresion-visual)
+- [Pruebas de regresión visual](#pruebas-de-regresión-visual)
 - [ Ventajas y desventajas de las herramientas utilizadas para las pruebas E2E](#ventajas-y-desventajas-de-las-herramientas-utilizadas-para-las-pruebas-e2e)
 
 ## Pruebas E2E con Kraken
