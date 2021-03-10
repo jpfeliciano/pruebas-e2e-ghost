@@ -166,6 +166,12 @@ En una terminal ubíquese en el directorio `pruebas-e2e-ghost/ghost-cypress-test
 
 `./node_modules/.bin/cypress run -C cypress.json`
 
+## Ventajas y desventajas de las herramientas utilizadas para las pruebas E2E
+
+En la siguiente página del proyecto se detallan los pros y contras que el equipo de pruebas encontró con cada una de las herramientas durante la implementación de los escenarios de prueba:
+
+[Pros y Contras](https://github.com/jpfeliciano/pruebas-e2e-ghost/wiki/pros_contras-e2e)
+
 ## Pruebas de regresión visual
 
 Los 10 escenarios seleccionados para las pruebas de regresión visual pertenecen a 10 funcionalidades de Ghost descritas a continuación:
@@ -236,7 +242,11 @@ En una terminal ubíquese en el directorio `pruebas-e2e-ghost/regresion-resemble
 
 Cuando finalice la ejecución del script vaya al directorio `cypress/results` y abra el archivo `report.html` para ver el resultado de la regresión visual.
 
-## Ventajas y desventajas de las herramientas utilizadas para las pruebas E2E
+#### Reporte defectos JIRA
+
+Para el registro de incidencias se utilizo JIRA, el cual esta disponible en la siguiente URL(https://jpfeliciano.atlassian.net/jira/software/c/projects/GHOST)
+
+## Ventajas y desventajas de las herramientas utilizadas para las pruebas regresión visual
 
 En la siguiente página del proyecto se detallan los pros y contras que el equipo de pruebas encontró con cada una de las herramientas durante la implementación de los escenarios de prueba:
 
