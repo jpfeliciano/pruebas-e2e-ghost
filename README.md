@@ -14,11 +14,12 @@ Este repositorio ha sido construído por:
 - [Pruebas E2E con Kraken](#pruebas-e2e-con-kraken)
 - [Pruebas E2E con Cypress](#pruebas-e2e-con-cypress)
 - [Pruebas de regresión visual](#pruebas-de-regresión-visual)
-- [ Ventajas y desventajas de las herramientas utilizadas para las pruebas E2E](#ventajas-y-desventajas-de-las-herramientas-utilizadas-para-las-pruebas-e2e)
+- [Ventajas y desventajas de las herramientas utilizadas para las pruebas E2E](#ventajas-y-desventajas-de-las-herramientas-utilizadas-para-las-pruebas-e2e)
+- [Ventajas y desventajas de las herramientas utilizadas para las pruebas regresión visual](#ventajas-y-desventajas-de-las-herramientas-utilizadas-para-las-pruebas-regresión-visual)
 
 ## Pruebas E2E con Kraken
 
-Los 26 escenarios seleccionados para las pruebas con Kraken pertenecen a 16 funcionalidades de Ghost descritas a continuación:
+Los 28 escenarios seleccionados para las pruebas con Kraken pertenecen a 16 funcionalidades de Ghost descritas a continuación:
 
 |Nº| Funcionalidad | Escenario | Tipo de Escenario |
 |-| ------------- | ------------- | ------------- |
@@ -45,9 +46,12 @@ Los 26 escenarios seleccionados para las pruebas con Kraken pertenecen a 16 func
 |21| Crear Vista | Crear vista personalizada de acuerdo a la visualización que se tenga en le momento de su creación. | Positivo |
 |22| Crear Vista | Crear vista con un nombre largo, el sistema debe informar la cantidad de caracteres permitidos. | Positivo |
 |23| Editar Vista | Permitir editar la vista, con una nueva visualización de la informaión. | Negativo |
-|24| Editar Vista | Editar campo nombre con un valor largo, el sistema debe informar la cantidad de caracteres. | Negativo |
+|24| Listar Tags | Consultar el listado de tags creados en el sitio. | Negativo |
 |25| Editar Vista | Editar el nombre de la vista, con 1 caracter valido. | Positivo |
 |26| Eliminar Vista | Ingresar a una vista personalizada y eliminarla. | Positivo |
+|27| Listar Posts | Consultar el listado de Posts/Publicaciones cread(o)as. | Positivo |
+|28| Filtrar Posts por valoración | Organizar la lista de Posts creados por valoración. | Positivo |
+
 
 El código de los escenarios de prueba implementados con kraken se encuentra en el directorio [ghost-kraken-test](ghost-kraken-test).
 
@@ -166,12 +170,6 @@ En una terminal ubíquese en el directorio `pruebas-e2e-ghost/ghost-cypress-test
 
 `./node_modules/.bin/cypress run -C cypress.json`
 
-## Ventajas y desventajas de las herramientas utilizadas para las pruebas E2E
-
-En la siguiente página del proyecto se detallan los pros y contras que el equipo de pruebas encontró con cada una de las herramientas durante la implementación de los escenarios de prueba:
-
-[Pros y Contras](https://github.com/jpfeliciano/pruebas-e2e-ghost/wiki/pros_contras-e2e)
-
 ## Pruebas de regresión visual
 
 Los 10 escenarios seleccionados para las pruebas de regresión visual pertenecen a 10 funcionalidades de Ghost descritas a continuación:
@@ -246,9 +244,14 @@ Cuando finalice la ejecución del script vaya al directorio `cypress/results` y 
 
 Para el registro de incidencias se utilizo JIRA, el cual esta disponible en la siguiente URL(https://jpfeliciano.atlassian.net/jira/software/c/projects/GHOST)
 
+## Ventajas y desventajas de las herramientas utilizadas para las pruebas E2E
+
+En la siguiente página del proyecto se detallan los pros y contras que el equipo de pruebas encontró con cada una de las herramientas durante la implementación de los escenarios de prueba:
+
+[Pros y Contras E2E](https://github.com/jpfeliciano/pruebas-e2e-ghost/wiki/pros_contras-e2e)
+
 ## Ventajas y desventajas de las herramientas utilizadas para las pruebas regresión visual
 
 En la siguiente página del proyecto se detallan los pros y contras que el equipo de pruebas encontró con cada una de las herramientas durante la implementación de los escenarios de prueba:
 
-[pros_contras_vrt](https://github.com/jpfeliciano/pruebas-e2e-ghost/wiki/pros_contras_vrt)
-
+[Pros y Contras VRT](https://github.com/jpfeliciano/pruebas-e2e-ghost/wiki/pros_contras_vrt)
