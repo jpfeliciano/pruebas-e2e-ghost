@@ -250,5 +250,5 @@ Para el registro de incidencias se utilizo JIRA, el cual esta disponible en la s
 
 En la siguiente página del proyecto se detallan los pros y contras que el equipo de pruebas encontró con cada una de las herramientas durante la implementación de los escenarios de prueba:
 
-[pros_contras_vrt](https://github.com/jpfeliciano/pruebas-e2e-ghost/wiki/pros_contras-e2e)
+[pros_contras_vrt](https://github.com/jpfeliciano/pruebas-e2e-ghost/wiki/pros_contras_vrt)
 
