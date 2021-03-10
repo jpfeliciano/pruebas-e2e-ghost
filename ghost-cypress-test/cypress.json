@@ -16,7 +16,8 @@
 		"9_edit_post_negative.spec.js",
 		"10_edit_profile.spec.js",
 		"11_create_page.spec.js",
-		"12_list_pages.spec.js"
+		"12_list_pages.spec.js",
+		"13_list_post_success.spec.js"
 	],
 	"postEditNegativeText": "http://www.uniandes.edu.co",
 	"chromeWebSecurity": false
