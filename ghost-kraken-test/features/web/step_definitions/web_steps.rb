@@ -34,6 +34,17 @@ if ENV["ADB_DEVICE_ARG"].nil?
       end
     end
   end
+  
+   Then(/^I click on element contained in css selector "(.*?)" with text "(.*?)"$/) do |selector, text|
+    elements = @driver.find_elements(:css, selector)
+    elements.each do |element|
+      attr = element.attribute('title')
+      if attr == text
+        element.click
+        break
+      end
+    end
+  end
 
   Then(/^I click on my user record contained in css selector "(.*?)" by using the selector value "(.*?)"$/) do |selector_group, selector_value|
     user = @driver.find_element(:css, selector_value).text
