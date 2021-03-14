@@ -244,6 +244,17 @@ Cuando finalice la ejecución del script vaya al directorio `cypress/results` y 
 
 Para el registro de incidencias se utilizo JIRA, el cual esta disponible en la siguiente URL(https://jpfeliciano.atlassian.net/jira/software/c/projects/GHOST)
 
+
+## Pruebas E2E generación de datos
+
+Para la generación de pruebas se usaron las siguientes estrategias:
+(1) pool de datos a-priori
+(2) pool de datos (pseudo) aleatorio dinámico 
+(3) escenario aleatorio. Para esto se tuvieron en cuenta parte de los escenarios construidos con kraken y cypress.
+
+
+
+
 ## Ventajas y desventajas de las herramientas utilizadas para las pruebas E2E
 
 En la siguiente página del proyecto se detallan los pros y contras que el equipo de pruebas encontró con cada una de las herramientas durante la implementación de los escenarios de prueba:
