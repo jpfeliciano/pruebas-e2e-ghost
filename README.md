@@ -248,9 +248,12 @@ Para el registro de incidencias se utilizo JIRA, el cual esta disponible en la s
 ## Pruebas E2E generación de datos
 
 Para la generación de pruebas se usaron las siguientes estrategias:
-(1) pool de datos a-priori
-(2) pool de datos (pseudo) aleatorio dinámico 
-(3) escenario aleatorio. Para esto se tuvieron en cuenta parte de los escenarios construidos con kraken y cypress.
+
+- pool de datos a-priori
+- pool de datos (pseudo) aleatorio dinámico 
+- escenario aleatorio. 
+
+Para esto se tuvieron en cuenta parte de los escenarios construidos con kraken y cypress.
 
 
 
