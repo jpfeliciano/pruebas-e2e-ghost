@@ -256,6 +256,16 @@ Para la generación de pruebas se usaron las siguientes estrategias:
 Para esto se tuvieron en cuenta parte de los escenarios construidos con kraken y cypress.
 
 
+#### pool de datos a-priori
+
+En esta generación se utilizaron los escenarios de kraken, para el cual se genero un JSON con la herramienta mockaroo en los que se utilizaron las variables a ejecutar en los escenarios.
+
+https://my.api.mockaroo.com/kraken.json
+
+Del contenido de este JSON se tomara la información para ser utilizado en el archivo de propiedades (properties.json) con el cual se ejecutaran 56 escenarios en kraken.
+Para ellos se debe ejecutar la url del JSON anteriormente mencionado, y copiar la información en el archivo properties.json en el apartado user1.
+
+
 
 
 ## Ventajas y desventajas de las herramientas utilizadas para las pruebas E2E
