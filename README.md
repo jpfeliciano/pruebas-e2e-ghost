@@ -265,11 +265,11 @@ https://my.api.mockaroo.com/kraken.json
 Del contenido de este JSON se tomara la información para ser utilizado en el archivo de propiedades (properties.json) con el cual se ejecutaran 56 escenarios en kraken.
 Para ellos se debe ejecutar la url del JSON anteriormente mencionado, y copiar la información en el archivo properties.json en el apartado user1.
 
-[](https://uniandes-my.sharepoint.com/:i:/r/personal/h_arias_uniandes_edu_co/Documents/Semana_7_Pruebas_Automatizadas/Kraken_1.png?csf=1&web=1&e=dy2Ufc)
+(https://uniandes-my.sharepoint.com/:i:/r/personal/h_arias_uniandes_edu_co/Documents/Semana_7_Pruebas_Automatizadas/Kraken_1.png?csf=1&web=1&e=dy2Ufc)
 
 Posteriormente se debe volver a ejecutar la URL de Json anterior y copiar la información en el archivo properties.json en el apartado user2.
 
-[](https://uniandes-my.sharepoint.com/:i:/r/personal/h_arias_uniandes_edu_co/Documents/Semana_7_Pruebas_Automatizadas/Kraken_2.png?csf=1&web=1&e=XIWO1J)
+(https://uniandes-my.sharepoint.com/:i:/r/personal/h_arias_uniandes_edu_co/Documents/Semana_7_Pruebas_Automatizadas/Kraken_2.png?csf=1&web=1&e=XIWO1J)
 
 ## Ventajas y desventajas de las herramientas utilizadas para las pruebas E2E
 
