@@ -69,7 +69,17 @@ module.exports = (on, config) => {
     },
   });
 
-
+  on("task", {
+    createPage() {
+      for (let index = 0; index < 5; index++) {
+        page.push([
+          faker.lorem.word(),
+          faker.internet.url()
+        ])
+      };
+      return page;
+    },
+  });
 
   // on("task", {
   //   tagPrueba() {
