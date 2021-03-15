@@ -1,0 +1,15 @@
+{
+	"projectId": "Ghost test cases",
+	"ghostUrl": "http://localhost:2368/ghost/",
+	"ghostAuthUrl": "http://localhost:2368/ghost/api/v3/admin/session",
+	"email": "juanp.feliciano@gmail.com",
+	"password": "password",
+	"testFiles": [
+		"2_create_tag_success.spec.js",
+		"10_edit_profile.spec.js"
+	],
+	"postEditNegativeText": "http://www.uniandes.edu.co",
+	"chromeWebSecurity": false,
+	"mockarooApiUsersUrl": "https://my.api.mockaroo.com/users.json?key=b36b1320",
+	"mockarooApiTagsUrl": "https://my.api.mockaroo.com/tags.json?key=b36b1320"
+}
