@@ -317,7 +317,7 @@ El comando anterior ejecuta todos los escenarios de prueba que se encuentran ubi
 ### Escenario aleatorio
 
 Para esta estrategia se utilizaron los escenarios de pruebas de extremo-a-extremo de cypress. Los datos se generaron en cada escenario definiendo un esquema en faker, el cual se solicita la tupla que se necesita para escenario.
-El contenido de la tupla se puede encontrar en el archivo zzz, en donde se encuentran las tareas para escenario ejecutado, los cuales están conformados 20 escenarios para creación de tags, 50 escenarios edición de la cuenta, 20 escenarios creación de post negativo.
+El contenido de la tupla se puede encontrar en el archivo cypress\plugins\index.js, en donde se encuentran las tareas para escenario ejecutado, los cuales están conformados 20 escenarios para creación de tags, 50 escenarios edición de la cuenta, 20 escenarios creación de post negativo.
 
 Instrucciones de ejecución
 Prerequisitos
