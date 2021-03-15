@@ -317,36 +317,44 @@ El comando anterior ejecuta todos los escenarios de prueba que se encuentran ubi
 ### Escenario aleatorio
 
 Para esta estrategia se utilizaron los escenarios de pruebas de extremo-a-extremo de cypress. Los datos se generaron en cada escenario definiendo un esquema en faker, el cual se solicita la tupla que se necesita para escenario.
-El contenido de la tupla se puede encontrar en el archivo cypress\plugins\index.js, en donde se encuentran las tareas para escenario ejecutado, los cuales están conformados 20 escenarios para creación de tags, 50 escenarios edición de la cuenta, 20 escenarios creación de post negativo.
+El contenido de la tupla se puede encontrar en el archivo cypress\plugins\index.js, en donde se encuentran las tareas para escenario ejecutado, los cuales están conformados 20 escenarios para creación de tags, 50 escenarios edición de la cuenta, 20 escenarios creación de post negativo. Para cambiar los datos usados para el esquema o la cantidad de escenarios, se puede dirigir al archivo anteriormente mencionado y realizar dicha configuración.
 
-Instrucciones de ejecución
-Prerequisitos
+### Instrucciones de ejecución
 
 - Una versión actualizada de Node.js instalada en su computadora.
-- Una versión actualizada del manejador de paquetes npm instalada en su computadora.
-- Instalar la versión 3.41.1 de Ghost en su máquina local siguiendo el tutorial del siguiente enlace Tutorial - Ghost.
+- Una versión actualizada del manejador de paquetes npm instalada en su computadora. 
+- Instalar la versión 3.41.1 de Ghost en su máquina local siguiendo el tutorial del siguiente enlace [Tutorial - Ghost](https://misovirtual.virtual.uniandes.edu.co/codelabs/ghost-local-deployment/index.html#0).
 - Crear una cuenta de usuario en Ghost (Incluído en el tutorial del anterior punto).
-- Instalar librerías
+
+
+#### Instalar librerías
+
 - Clone el repositorio de pruebas utilizando uno de los siguientes comandos:
-git clone git@github.com:jpfeliciano/pruebas-e2e-ghost.git
+
+`git clone git@github.com:jpfeliciano/pruebas-e2e-ghost.git`
 
 ó
 
-git clone https://github.com/jpfeliciano/pruebas-e2e-ghost.git
+`git clone https://github.com/jpfeliciano/pruebas-e2e-ghost.git`
 
-Ahora navegue hasta el subdirectorio pruebas-e2e-ghost/ghost-cypress-test con el siguiente comando:
-cd pruebas-e2e-ghost/ghost-cypress-test/
 
-Finalmente instale las librerías requeridas:
-npm install
+- Ahora navegue hasta el subdirectorio `pruebas-e2e-ghost/ghost-cypress-test` con el siguiente comando:
 
-Configuración de parámetros de ejecución
-En una terminal ubíquese en el directorio pruebas-e2e-ghost/ghost-cypress-test y abra el archivo cypress.json en el editor de texto de su preferencia. Establezca el valor de las variables email y password con los valores que utilizó cuando creó la cuenta de usuario en Ghost.
+`cd pruebas-e2e-ghost/ghost-cypress-test/`
 
-Ejecución de las pruebas E2E
-En una terminal ubíquese en el directorio pruebas-e2e-ghost/ghost-cypress-test y ejecute el siguiente comando para probar todos los escenarios:
+- Finalmente instale las librerías requeridas:
 
-./node_modules/.bin/cypress run -C cypress.json
+`npm install`
+
+#### Configuración de parámetros de ejecución
+
+En una terminal ubíquese en el directorio `pruebas-e2e-ghost/ghost-cypress-test` y abra el archivo `cypress.json` en el editor de texto de su preferencia. Establezca el valor de las variables `email` y `password` con los valores que utilizó cuando creó la cuenta de usuario en Ghost.
+
+#### Ejecución de las pruebas E2E con generación de datos faker
+
+En una terminal ubíquese en el directorio `pruebas-e2e-ghost/ghost-cypress-test` y ejecute el siguiente comando para probar todos los escenarios:
+
+`./node_modules/.bin/cypress run -C cypress.json`
 
 
 ## Ventajas y desventajas de las herramientas utilizadas para las pruebas E2E
