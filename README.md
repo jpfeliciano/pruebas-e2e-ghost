@@ -258,19 +258,13 @@ Para esto se tuvieron en cuenta parte de los escenarios construidos con kraken y
 
 ### Pool de datos a-priori
 
-Para esta estrategia se utilizaron los escenarios de pruebas de extremo-a-exremo de Kraken. Los datos se generaron previamente definiendo un esquema en [Mockaroo](#https://mockaroo.com/) y posteriormente previsualizando los datos en formato JSON para 2 registros, simulando la interacción de dos usuarios diferentes. El esquema creado se encuentra disponible en el siguiente enlace:
-
-[Esquema Kraken](https://mockaroo.com/8b9a5000)
+Para esta estrategia se utilizaron los escenarios de pruebas de extremo-a-exremo de Kraken. Los datos se generaron previamente definiendo un esquema en [Mockaroo](https://mockaroo.com/) y posteriormente previsualizando los datos en formato JSON para 2 registros, simulando la interacción de dos usuarios diferentes. El esquema creado se encuentra disponible en el siguiente enlace: [Esquema Kraken](https://mockaroo.com/8b9a5000).
 
 El contenido de la previsualización en formato JSON es la data que se suministra durante la ejecución de la prueba. Para leer estos datos desde los escenarios de kraken los valores de la previsualización fueron copiados en el archivo de propiedades (properties.json), con lo que se obtienen 56 escenarios de prueba.
 
-En la siguiente imágen se muestran los datos copiados en el apartado @user1 del archivo de propiedades:
+En la siguiente imágen se muestran los datos copiados en el apartado @user1 del archivo de propiedades: [Datos Usuario 1](https://uniandes-my.sharepoint.com/:i:/r/personal/h_arias_uniandes_edu_co/Documents/Semana_7_Pruebas_Automatizadas/Kraken_1.png?csf=1&web=1&e=dy2Ufc)
 
-[Datos Usuario 1](https://uniandes-my.sharepoint.com/:i:/r/personal/h_arias_uniandes_edu_co/Documents/Semana_7_Pruebas_Automatizadas/Kraken_1.png?csf=1&web=1&e=dy2Ufc)
-
-Así mismo los datos copiados en la sección @user2:
-
-[Datos Usuario 2](https://uniandes-my.sharepoint.com/:i:/r/personal/h_arias_uniandes_edu_co/Documents/Semana_7_Pruebas_Automatizadas/Kraken_2.png?csf=1&web=1&e=XIWO1J)
+Así mismo los datos copiados en la sección @user2: [Datos Usuario 2](https://uniandes-my.sharepoint.com/:i:/r/personal/h_arias_uniandes_edu_co/Documents/Semana_7_Pruebas_Automatizadas/Kraken_2.png?csf=1&web=1&e=XIWO1J)
 
 #### Instrucciones de ejecución
 
