@@ -314,6 +314,53 @@ El comando anterior ejecuta todos los escenarios de prueba que se encuentran ubi
 
 ### Pool de datos (pseudo) aleatorio dinámico
 
+Para la implementación de esta estrategia se crearon API's de prueba desde Mockaroo partiendo de la definición de esquemas para los escenarios de prueba seleccionados. Para ver el detalle de los esquemas y API's utilizados se debe crear una cuenta en Mockaroo utilizando el siguiente enlace [Create a Free Account](https://mockaroo.com/mock_apis).
+
+En la siguiente tabla se detallan las funcionalidades seleccionadas de Ghost para la prueba, el link del esquema, el link con datos de ejemplo retornados por el API y la cantidad de escenarios generados:
+
+| Funcionalidad | Esquema | API example | Escenarios |
+| ------------- | ------------- | ------------- |-------|
+| Crear Tag | https://mockaroo.com/schemas/297094 | https://my.api.mockaroo.com/tags.json?key=b36b1320 | 20 |
+| Editar perfil de usuario | https://mockaroo.com/schemas/297086 | https://my.api.mockaroo.com/users.json?key=b36b1320 | 20 |
+
+#### Instrucciones de ejecución
+
+##### Prerequisitos
+
+- Una versión actualizada de Node.js instalada en su computadora.
+- Una versión actualizada del manejador de paquetes npm instalada en su computadora. 
+- Instalar la versión 3.41.1 de Ghost en su máquina local siguiendo el tutorial del siguiente enlace [Tutorial - Ghost](https://misovirtual.virtual.uniandes.edu.co/codelabs/ghost-local-deployment/index.html#0).
+- Crear una cuenta de usuario en Ghost (Incluído en el tutorial del anterior punto).
+
+##### Instalar librerías
+
+- Clone el repositorio de pruebas utilizando uno de los siguientes comandos:
+
+`git clone git@github.com:jpfeliciano/pruebas-e2e-ghost.git`
+
+ó
+
+`git clone https://github.com/jpfeliciano/pruebas-e2e-ghost.git`
+
+
+- Ahora navegue hasta el subdirectorio `pruebas-e2e-ghost/dynamic-data-cypress-test` con el siguiente comando:
+
+`cd pruebas-e2e-ghost/dynamic-data-cypress-test/`
+
+- Finalmente instale las librerías requeridas:
+
+`npm install`
+
+##### Configuración de parámetros de ejecución
+
+En una terminal ubíquese en el directorio `pruebas-e2e-ghost/dynamic-data-cypress-test` y abra el archivo `cypress.json` en el editor de texto de su preferencia. Establezca el valor de las variables `ghostUrl`, `ghostAuthUrl`, `email` y `password` con los valores de configuración de la instancia de Ghost instalada.
+
+##### Ejecución de las pruebas E2E con pool de datos (pseudo) aleatorio dinámico
+
+En una terminal ubíquese en el directorio `pruebas-e2e-ghost/dynamic-data-cypress-test` y ejecute el siguiente comando para probar todos los escenarios:
+
+`./node_modules/.bin/cypress run -C cypress.json`
+
 ### Escenario aleatorio
 
 Para esta estrategia se utilizaron los escenarios de pruebas de extremo-a-extremo de cypress. Los datos se generaron en cada escenario definiendo un esquema en faker, el cual se solicita la tupla que se necesita para escenario.
