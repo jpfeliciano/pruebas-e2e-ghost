@@ -14,6 +14,7 @@ Este repositorio ha sido construído por:
 - [Pruebas E2E con Kraken](#pruebas-e2e-con-kraken)
 - [Pruebas E2E con Cypress](#pruebas-e2e-con-cypress)
 - [Pruebas de regresión visual](#pruebas-de-regresión-visual)
+- [Pruebas E2E con generación de datos](#pruebas-e2e-con-generación-de-datos)
 - [Ventajas y desventajas de las herramientas utilizadas para las pruebas E2E](#ventajas-y-desventajas-de-las-herramientas-utilizadas-para-las-pruebas-e2e)
 - [Ventajas y desventajas de las herramientas utilizadas para las pruebas regresión visual](#ventajas-y-desventajas-de-las-herramientas-utilizadas-para-las-pruebas-regresión-visual)
 
@@ -245,31 +246,81 @@ Cuando finalice la ejecución del script vaya al directorio `cypress/results` y 
 Para el registro de incidencias se utilizo JIRA, el cual esta disponible en la siguiente URL(https://jpfeliciano.atlassian.net/jira/software/c/projects/GHOST)
 
 
-## Pruebas E2E generación de datos
+## Pruebas E2E con generación de datos
 
 Para la generación de pruebas se usaron las siguientes estrategias:
 
-- pool de datos a-priori
-- pool de datos (pseudo) aleatorio dinámico 
-- escenario aleatorio. 
+- Pool de datos a-priori.
+- Pool de datos (pseudo) aleatorio dinámico.
+- Escenario aleatorio. 
 
 Para esto se tuvieron en cuenta parte de los escenarios construidos con kraken y cypress.
 
+### Pool de datos a-priori
 
-#### pool de datos a-priori
+Para esta estrategia se utilizaron los escenarios de pruebas de extremo-a-exremo de Kraken. Los datos se generaron previamente definiendo un esquema en [Mockaroo](#https://mockaroo.com/) y posteriormente previsualizando los datos en formato JSON para 2 registros, simulando la interacción de dos usuarios diferentes. El esquema creado se encuentra disponible en el siguiente enlace:
 
-En esta generación se utilizaron los escenarios de kraken, para el cual se genero un JSON con la herramienta mockaroo en los que se utilizaron las variables a ejecutar en los escenarios.
+[Esquema Kraken](https://mockaroo.com/8b9a5000)
 
-https://my.api.mockaroo.com/kraken.json
+El contenido de la previsualización en formato JSON es la data que se suministra durante la ejecución de la prueba. Para leer estos datos desde los escenarios de kraken los valores de la previsualización fueron copiados en el archivo de propiedades (properties.json), con lo que se obtienen 56 escenarios de prueba.
 
-Del contenido de este JSON se tomara la información para ser utilizado en el archivo de propiedades (properties.json) con el cual se ejecutaran 56 escenarios en kraken.
-Para ellos se debe ejecutar la url del JSON anteriormente mencionado, y copiar la información en el archivo properties.json en el apartado user1.
+En la siguiente imágen se muestran los datos copiados en el apartado @user1 del archivo de propiedades:
 
-(https://uniandes-my.sharepoint.com/:i:/r/personal/h_arias_uniandes_edu_co/Documents/Semana_7_Pruebas_Automatizadas/Kraken_1.png?csf=1&web=1&e=dy2Ufc)
+[Datos Usuario 1](https://uniandes-my.sharepoint.com/:i:/r/personal/h_arias_uniandes_edu_co/Documents/Semana_7_Pruebas_Automatizadas/Kraken_1.png?csf=1&web=1&e=dy2Ufc)
 
-Posteriormente se debe volver a ejecutar la URL de Json anterior y copiar la información en el archivo properties.json en el apartado user2.
+Así mismo los datos copiados en la sección @user2:
 
-(https://uniandes-my.sharepoint.com/:i:/r/personal/h_arias_uniandes_edu_co/Documents/Semana_7_Pruebas_Automatizadas/Kraken_2.png?csf=1&web=1&e=XIWO1J)
+[Datos Usuario 2](https://uniandes-my.sharepoint.com/:i:/r/personal/h_arias_uniandes_edu_co/Documents/Semana_7_Pruebas_Automatizadas/Kraken_2.png?csf=1&web=1&e=XIWO1J)
+
+#### Instrucciones de ejecución
+
+Antes de ejecutar las pruebas se deben completar las configuraciones definidas en las siguientes secciones:
+
+- [Prerequisitos Kraken](#prerequisitos)
+- [Definición de variables de entorno Kraken](#configuración-de-variables-de-entorno)
+
+#### Instalar Kraken-Mobile desde el código fuente
+
+- En su terminal, ejecute el siguiente comando:
+
+`gem install bundler`
+
+- Ahora descargue el código fuente de Kraken-Mobile a su máquina local. Para esto, ubíquese en el directorio donde se alojará el subdirectorio con las pruebas (paso siguiente), como el subdirectorio para Kraken-Mobile. Clone los fuentes de Kraken desde el siguiente repositorio: [KrakenMobile](https://github.com/TheSoftwareDesignLab/KrakenMobile).
+
+- En el mismo directorio (padre) que contiene el código fuente de Kraken, clone el repositorio de pruebas utilizando uno de los siguientes comandos:
+
+`git clone git@github.com:jpfeliciano/pruebas-e2e-ghost.git`
+
+ó
+
+`git clone https://github.com/jpfeliciano/pruebas-e2e-ghost.git`
+
+
+- Ahora navegue hasta el subdirectorio `pruebas-e2e-ghost/ghost-kraken-pool-data` con el siguiente comando:
+
+`cd pruebas-e2e-ghost/ghost-kraken-pool-data/`
+
+- Finalmente instale ruby y kraken:
+
+`bundle install`
+
+#### Configuración de parámetros de ejecución
+
+En una terminal ubíquese en el directorio `pruebas-e2e-ghost/ghost-kraken-pool-data` y abra el archivo `properties.json` en el editor de texto de su preferencia. Establezca el valor de las variables `USERNAME` y `PASSWORD` con los valores que utilizó cuando creó la cuenta de usuario en Ghost.
+
+#### Ejecución de las pruebas E2E con Kraken y datos a-priori
+
+En una terminal ubíquese en el directorio `pruebas-e2e-ghost/ghost-kraken-pool-data` y ejecute el siguiente comando para probar todos los escenarios:
+
+`bundle exec kraken-mobile run --properties=./properties.json`
+
+El comando anterior ejecuta todos los escenarios de prueba que se encuentran ubicados en el directorio `features`. Si se presentan errores durante la ejecución con el anterior comando, puede ejecutarlos de forma independiente tomando cómo referencia el siguiente (recomendado):
+
+`bundle exec kraken-mobile run --feature="features/crear_tag_success.feature" --properties=./properties.json`
+
+### Pool de datos (pseudo) aleatorio dinámico
+
+### Escenario aleatorio
 
 ## Ventajas y desventajas de las herramientas utilizadas para las pruebas E2E
 
