@@ -319,6 +319,35 @@ El comando anterior ejecuta todos los escenarios de prueba que se encuentran ubi
 Para esta estrategia se utilizaron los escenarios de pruebas de extremo-a-extremo de cypress. Los datos se generaron en cada escenario definiendo un esquema en faker, el cual se solicita la tupla que se necesita para escenario.
 El contenido de la tupla se puede encontrar en el archivo zzz, en donde se encuentran las tareas para escenario ejecutado, los cuales están conformados 20 escenarios para creación de tags, 50 escenarios edición de la cuenta, 20 escenarios creación de post negativo.
 
+Instrucciones de ejecución
+Prerequisitos
+
+- Una versión actualizada de Node.js instalada en su computadora.
+- Una versión actualizada del manejador de paquetes npm instalada en su computadora.
+- Instalar la versión 3.41.1 de Ghost en su máquina local siguiendo el tutorial del siguiente enlace Tutorial - Ghost.
+- Crear una cuenta de usuario en Ghost (Incluído en el tutorial del anterior punto).
+- Instalar librerías
+- Clone el repositorio de pruebas utilizando uno de los siguientes comandos:
+git clone git@github.com:jpfeliciano/pruebas-e2e-ghost.git
+
+ó
+
+git clone https://github.com/jpfeliciano/pruebas-e2e-ghost.git
+
+Ahora navegue hasta el subdirectorio pruebas-e2e-ghost/ghost-cypress-test con el siguiente comando:
+cd pruebas-e2e-ghost/ghost-cypress-test/
+
+Finalmente instale las librerías requeridas:
+npm install
+
+Configuración de parámetros de ejecución
+En una terminal ubíquese en el directorio pruebas-e2e-ghost/ghost-cypress-test y abra el archivo cypress.json en el editor de texto de su preferencia. Establezca el valor de las variables email y password con los valores que utilizó cuando creó la cuenta de usuario en Ghost.
+
+Ejecución de las pruebas E2E
+En una terminal ubíquese en el directorio pruebas-e2e-ghost/ghost-cypress-test y ejecute el siguiente comando para probar todos los escenarios:
+
+./node_modules/.bin/cypress run -C cypress.json
+
 
 ## Ventajas y desventajas de las herramientas utilizadas para las pruebas E2E
 
