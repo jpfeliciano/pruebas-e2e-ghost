@@ -5,7 +5,9 @@
 	"email": "h.arias@uniandes.edu.co",
 	"password": "Ubuntu170212*",
 	"testFiles": [
+		"2_create_tag_success.spec.js",
 		"9_edit_post_negative.spec.js"
+		"10_edit_profile.spec.js"
 	],
 	"postEditNegativeText": "http://www.uniandes.edu.co",
 	"chromeWebSecurity": false
