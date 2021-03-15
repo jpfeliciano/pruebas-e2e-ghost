@@ -258,7 +258,7 @@ Para esto se tuvieron en cuenta parte de los escenarios construidos con kraken y
 
 ### Pool de datos a-priori
 
-Para esta estrategia se utilizaron los escenarios de pruebas de extremo-a-exremo de Kraken. Los datos se generaron previamente definiendo un esquema en [Mockaroo](https://mockaroo.com/) y posteriormente previsualizando los datos en formato JSON para 2 registros, simulando la interacción de dos usuarios diferentes. El esquema creado se encuentra disponible en el siguiente enlace: [Esquema Kraken](https://mockaroo.com/8b9a5000).
+Para esta estrategia se utilizaron los escenarios de pruebas de extremo-a-extremo de Kraken. Los datos se generaron previamente definiendo un esquema en [Mockaroo](https://mockaroo.com/) y posteriormente previsualizando los datos en formato JSON para 2 registros, simulando la interacción de dos usuarios diferentes. El esquema creado se encuentra disponible en el siguiente enlace: [Esquema Kraken](https://mockaroo.com/8b9a5000).
 
 El contenido de la previsualización en formato JSON es la data que se suministra durante la ejecución de la prueba. Para leer estos datos desde los escenarios de kraken los valores de la previsualización fueron copiados en el archivo de propiedades (properties.json), con lo que se obtienen 56 escenarios de prueba.
 
@@ -315,6 +315,10 @@ El comando anterior ejecuta todos los escenarios de prueba que se encuentran ubi
 ### Pool de datos (pseudo) aleatorio dinámico
 
 ### Escenario aleatorio
+
+Para esta estrategia se utilizaron los escenarios de pruebas de extremo-a-extremo de cypress. Los datos se generaron en cada escenario definiendo un esquema en faker, el cual se solicita la tupla que se necesita para escenario.
+El contenido de la tupla se puede encontrar en el archivo zzz, en donde se encuentran las tareas para escenario ejecutado, los cuales están conformados 20 escenarios para creación de tags, 50 escenarios edición de la cuenta, 20 escenarios creación de post negativo.
+
 
 ## Ventajas y desventajas de las herramientas utilizadas para las pruebas E2E
 
