@@ -11,6 +11,7 @@ Este repositorio ha sido construído por:
 
 ## Contenido
 
+- [Estrategia de pruebas](#estrategia-de-pruebas)
 - [Pruebas exploratorias manuales](#pruebas-exploratorias-manuales)
 - [Pruebas exploratorias automatizadas](#pruebas-exploratorias-automatizadas)
 - [Pruebas E2E con Kraken](#pruebas-e2e-con-kraken)
@@ -20,6 +21,12 @@ Este repositorio ha sido construído por:
 - [Ventajas y desventajas de las herramientas utilizadas para las pruebas de reconocimiento](#ventajas-y-desventajas-de-las-herramientas-utilizadas-para-las-pruebas-de-reconocimiento)
 - [Ventajas y desventajas de las herramientas utilizadas para las pruebas E2E](#ventajas-y-desventajas-de-las-herramientas-utilizadas-para-las-pruebas-e2e)
 - [Ventajas y desventajas de las herramientas utilizadas para las pruebas regresión visual](#ventajas-y-desventajas-de-las-herramientas-utilizadas-para-las-pruebas-regresión-visual)
+
+## Estrategia de pruebas
+
+El documento con la definición de la estrategia de pruebas se encuentra disponible en el siguiente enlace:
+
+[Documento estrategia de pruebas](https://drive.google.com/file/d/1M8bId_tjpjVKMxs4NaiqX0SFmvEyZzg4/view?usp=sharing)
 
 ## Pruebas exploratorias manuales
 
