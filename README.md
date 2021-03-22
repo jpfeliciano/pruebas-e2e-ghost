@@ -22,7 +22,7 @@ Este repositorio ha sido construído por:
 
 ## Pruebas exploratorias manuales
 
-Para adquirir un conocimiento base sobre la aplicación bajo pruebas (ABP) GHOST, durante la primera iteración se ejecutaron pruebas manuales exploratorias. El detalle de las funcionalidades probadas, los tipos de prueba y un enlace con un video que evidencia la ejecución de las pruebas se encuentran detallados en el siguiente documento:
+Para adquirir un conocimiento base sobre la aplicación bajo pruebas (ABP) GHOST, durante la primera iteración se ejecutaron pruebas manuales exploratorias. El detalle de las funcionalidades probadas, los tipos de prueba y un enlace a un video que evidencia la ejecución de cada prueba, se encuentran detallados en el siguiente documento:
 
 [Pruebas Exploratorias](https://github.com/jpfeliciano/pruebas-e2e-ghost/blob/main/pruebas-exploratorias-manuales/inventario-pruebas-exploratorias.xlsx)
 
