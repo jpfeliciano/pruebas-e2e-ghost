@@ -17,6 +17,7 @@ Este repositorio ha sido construído por:
 - [Pruebas E2E con Cypress](#pruebas-e2e-con-cypress)
 - [Pruebas de regresión visual](#pruebas-de-regresión-visual)
 - [Pruebas E2E con generación de datos](#pruebas-e2e-con-generación-de-datos)
+- [Ventajas y desventajas de las herramientas utilizadas para las pruebas de reconocimiento](#ventajas-y-desventajas-de-las-herramientas-utilizadas-para-las-pruebas-de-reconocimiento)
 - [Ventajas y desventajas de las herramientas utilizadas para las pruebas E2E](#ventajas-y-desventajas-de-las-herramientas-utilizadas-para-las-pruebas-e2e)
 - [Ventajas y desventajas de las herramientas utilizadas para las pruebas regresión visual](#ventajas-y-desventajas-de-las-herramientas-utilizadas-para-las-pruebas-regresión-visual)
 
@@ -411,15 +412,20 @@ En una terminal ubíquese en el directorio `pruebas-e2e-ghost/ghost-cypress-pool
 
 `./node_modules/.bin/cypress run -C cypress.json`
 
+## Ventajas y desventajas de las herramientas utilizadas para las pruebas de reconocimiento
+
+En la siguiente página del proyecto se detallan los pros y contras que el equipo de pruebas encontró con cada una de las herramientas durante la implementación de las pruebas de reconocimiento:
+
+[Pros y Contras pruebas de reconocimiento](https://github.com/jpfeliciano/pruebas-e2e-ghost/wiki/pros_contras-reconocimiento)
 
 ## Ventajas y desventajas de las herramientas utilizadas para las pruebas E2E
 
-En la siguiente página del proyecto se detallan los pros y contras que el equipo de pruebas encontró con cada una de las herramientas durante la implementación de los escenarios de prueba:
+En la siguiente página del proyecto se detallan los pros y contras que el equipo de pruebas encontró con cada una de las herramientas durante la implementación de los escenarios de pruebas de extremo-a-extremo:
 
 [Pros y Contras E2E](https://github.com/jpfeliciano/pruebas-e2e-ghost/wiki/pros_contras-e2e)
 
 ## Ventajas y desventajas de las herramientas utilizadas para las pruebas regresión visual
 
-En la siguiente página del proyecto se detallan los pros y contras que el equipo de pruebas encontró con cada una de las herramientas durante la implementación de los escenarios de prueba:
+En la siguiente página del proyecto se detallan los pros y contras que el equipo de pruebas encontró con cada una de las herramientas durante la implementación de los escenarios E2E para las pruebas de regresión visual:
 
 [Pros y Contras VRT](https://github.com/jpfeliciano/pruebas-e2e-ghost/wiki/pros_contras_vrt)
