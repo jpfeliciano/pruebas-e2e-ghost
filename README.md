@@ -1,6 +1,6 @@
-# Repositorio pruebas E2E de Ghost con Kraken y Cypress
+# Introducción
 
-Este repositorio contiene 30 escenarios de pruebas de extremo-a-extremo (E2E) sobre la plataforma de gestión de contenido [Ghost](https://github.com/TryGhost/Ghost) implementados con [Kraken](https://thesoftwaredesignlab.github.io/KrakenMobile/) y con [Cypress](https://www.cypress.io/).
+Este repositorio contiene los artefactos construídos (scripts, funcionalidades y evidencias) para la consecución de los objetivos definidos en la estrategia de pruebas sobre las versiones 3.3.0 y 3.41.1 de la interfaz de usuario de administración plataforma de gestión de contenido [Ghost](https://github.com/TryGhost/Ghost).
 
 Este repositorio ha sido construído por:
 
@@ -11,12 +11,20 @@ Este repositorio ha sido construído por:
 
 ## Contenido
 
+- [Pruebas exploratorias manuales](#pruebas-exploratorias-manuales)
+- [Pruebas exploratorias automatizadas](#pruebas-exploratorias-automatizadas)
 - [Pruebas E2E con Kraken](#pruebas-e2e-con-kraken)
 - [Pruebas E2E con Cypress](#pruebas-e2e-con-cypress)
 - [Pruebas de regresión visual](#pruebas-de-regresión-visual)
 - [Pruebas E2E con generación de datos](#pruebas-e2e-con-generación-de-datos)
 - [Ventajas y desventajas de las herramientas utilizadas para las pruebas E2E](#ventajas-y-desventajas-de-las-herramientas-utilizadas-para-las-pruebas-e2e)
 - [Ventajas y desventajas de las herramientas utilizadas para las pruebas regresión visual](#ventajas-y-desventajas-de-las-herramientas-utilizadas-para-las-pruebas-regresión-visual)
+
+## Pruebas exploratorias manuales
+
+Para adquirir un conocimiento base sobre la aplicación bajo pruebas (ABP) GHOST, durante la primera iteración se ejecutaron pruebas manuales exploratorias. El detalle de las funcionalidades probadas, los tipos de prueba y un enlace con un video que evidencia la ejecución de las pruebas se encuentran detallados en el siguiente documento:
+
+[Pruebas Exploratorias](#https://github.com/jpfeliciano/pruebas-e2e-ghost/pruebas-exploratorias-manuales/inventario-pruebas-exploratorias.xlsx)
 
 ## Pruebas E2E con Kraken
 
