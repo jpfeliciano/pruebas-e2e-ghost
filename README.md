@@ -1,6 +1,6 @@
 # Introducción
 
-Este repositorio contiene los artefactos construídos (scripts, funcionalidades y evidencias) para la consecución de los objetivos definidos en la estrategia de pruebas sobre las versiones 3.3.0 y 3.41.1 de la interfaz de usuario de administración plataforma de gestión de contenido [Ghost](https://github.com/TryGhost/Ghost).
+Este repositorio contiene los artefactos construídos (scripts, funcionalidades y evidencias) para la consecución de los objetivos definidos en la estrategia de pruebas sobre las versiones 3.3.0 y 3.41.1 de la interfaz de usuario de administración de [Ghost](https://github.com/TryGhost/Ghost).
 
 Este repositorio ha sido construído por:
 
